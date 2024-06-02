@@ -27,11 +27,11 @@ app.use(cookieParser());
 
 // mongoDB connection
 mongoose.connect(mongLink, {
-    dbName: "docs"
+    dbName: "docs",
 }).then((v) => {
     console.log("connection done!");
 }).catch((e) => {
-    console.log("err in connection!");
+    console.log(e);
     throw Error("db doesn't work");
 });
 

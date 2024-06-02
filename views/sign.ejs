@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ar" mode="<%= darkMode?"dark":"light" %>">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/fontawesome-free-6.4.0-web/css/all.min.css" />
+    <title>سجل دخولك الى عُلِم</title>
+    <script src="/js/sign.js"></script>
+    <link rel="stylesheet" href="/css/vars.css" />
+    <link rel="stylesheet" href="/css/signStyle.css" />
+  </head>
+  <body>
+    <section>
+      <form action="/sign" method="post">
+        <label for="email">قم بإدخال بريدك الإكتروني</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="name@example"
+          required
+        />
+        <input type="submit" value="سجل الدخول" />
+        <div class="hint">
+          <i class="fa fa-info"></i>
+          <p>
+            اذا كنت تمتلك حساباً على هذا الموقع، او ان كنت لا تمتلك؛ كل ما عليك
+            فعله للحصول على حساب او الوصول اليه هو ان تقوم بادخال بريدك
+            الالكتروني وانتظار وصول رسالة تعطيك الصلاحية للوصول الى حسابك الجديد
+            او لقديم.
+          </p>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>

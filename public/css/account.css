@@ -1,0 +1,64 @@
+@font-face {
+    font-family: Ruck;
+    src: url("./fonts/main.ttf");
+}
+@font-face {
+    font-family: olem;
+    src: url("./fonts/SakkalMajalla.dc184b4627acc3e27f1f.woff2");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-family: Ruck;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(var(--bg), var(--sec));
+    color: var(--font);
+    height: 100vh;
+}
+
+body > div {
+    color: var(--red);
+    min-width: 300px;
+    max-width: 400px;
+    width: 100%;
+    padding: 1em;
+    border-radius: 1rem;
+    border: 1px solid var(--red);
+    background-color: var(--box);
+    box-shadow: 0 4px 1em var(--shadow);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+body > div i {
+    font-size: 120px;
+    margin: 16px;
+}
+body > div p {
+    font-weight: bolder;
+    font-size: small;
+}
+body > a {
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    font-size: large;
+    color: var(--main-color);
+}
+body > a > i {
+    padding-inline-end: 10px;
+}

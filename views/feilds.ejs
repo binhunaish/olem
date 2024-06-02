@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ar" mode="<%= darkMode?"dark":"light" %>">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/vars.css">
+    <link rel="stylesheet" href="/css/feilds.css">
+    <link rel="stylesheet" href="/fontawesome-free-6.4.0-web/css/all.min.css">
+    <script src="/js/feilds.js"></script>
+    <title>المجالات</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="/"><%- include('components/logo') %></a>
+            <a href="/about"><i class="fa fa-circle-info"></i></a>
+            <button id="LD">
+                <i class="fa fa-sun"></i>
+                <h2>مشرق</h2>
+            </button>
+        </nav>
+        <h1>اِبحث عن مجال يدور في بالك</h1>
+        <input oninput="search()" type="search" placeholder="ابحث هنا...">
+    </header>
+    <main>
+        <ul>
+            <%- feilds.map(v=> {
+                return `<li><a href="/feild/${v._id}">
+                        <h3>${v.title}</h3>
+                        <h6>${v.type}</h6>
+                        <p>${v.description}</p>
+                    </a></li>`;
+                }).join(' ') %>
+        </ul>
+    </main>
+    <%- include('components/footer') %>
+</body>
+
+</html>

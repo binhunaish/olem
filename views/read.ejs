@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar" mode="<%= darkMode?"dark":"light" %>">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>قراءة: <%- title -%></title>
+    <link rel="stylesheet" href="/css/vars.css" />
+    <link rel="stylesheet" href="/css/read.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/documentation styling.css" />
+    <script>
+      var title = <%- JSON.stringify(title) -%>;
+      var fields = <%- JSON.stringify(suggested) -%>;
+      var id = <%- JSON.stringify(id) -%>;
+      var root = <%- JSON.stringify(root) -%>;
+    </script>
+    <script src="/js/read.js"></script>
+    <script src="/js/libs/cookie.js"></script>
+    <link rel="stylesheet" href="/fontawesome-free-6.4.0-web/css/all.min.css" />
+  </head>
+
+  <body dir="rtl">
+    <header>
+      <i class="fa fa-bars" onclick="drawer()"></i>
+      <h1>
+          <%- include('components/logo') %>
+        عُلِم
+      </h1>
+      <nav>
+        <button id="LD" onclick="LDSwitch(true)">
+          <h2>مشرق</h2>
+          <a></a>
+        </button>
+        <a href="../"> <i class="fa fa-home"></i></a>
+        <a href="../about"> <i class="fa fa-circle-info"></i></a>
+      </nav>
+    </header>
+
+    <nav></nav>
+
+    <aside class="slide-in">
+      <i class="fa fa-x" onclick="drawer()"></i>
+      <h1></h1>
+      <p id="empty-area">
+        لا يوجد محتوى يمكن عرضه، عليك انتظار صانع المحتوى حتى ينشئ شيئاً ما.
+      </p>
+      <ul></ul>
+    </aside>
+
+    <main>
+      <div id="empty-area">
+        اختر احد الدروس من القوائم يمين الدرس
+        <br />
+        <br />
+        <i class="fa fa-arrow-right"></i>
+      </div>
+    </main>
+  </body>
+</html>

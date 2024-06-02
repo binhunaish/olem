@@ -1,0 +1,95 @@
+#only-read-area * {
+    padding: 2px;
+}
+#only-read-area a{
+    color: var(--font);
+    border-radius: 2px;
+    padding: 0 2px;
+    text-decoration-color: white;
+    text-decoration-style: solid;
+    text-decoration-line: underline;
+}
+#only-read-area del {
+    color: var(--red);
+    text-decoration: line-through;
+}
+#only-read-area ol li {
+    list-style-type: decimal;
+    padding-inline-start: 2vw;
+}
+#only-read-area ul li {
+    list-style: circle;
+    padding-inline-start: 2vw;
+}
+#only-read-area hr {
+    outline: var(--font-disable) solid 0.01px;
+    padding: 0;
+    margin: 5px auto;
+    width: 80%;
+}
+#only-read-area img{                                                        
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+}
+#only-read-area code {
+    background-color: var(--box);
+    border-radius: 2px;
+}
+#only-read-area .tableContaner {
+    overflow: auto hidden;
+    border-radius: 10px;
+    max-width: 80vw;
+    padding: 0;
+    margin: auto;
+}
+#only-read-area table {
+    width: 100%;
+    background-color: var(--sec);
+    overflow: hidden;
+}
+#only-read-area tr {
+    border-bottom: solid 1px var(--font);
+}
+#only-read-area td {
+    min-width: 100px;
+}
+#only-read-area blockquote {
+    display: block;
+    position: relative;
+    background-color: var(--sec);
+    margin-inline-start: 10;
+    margin-inline-start: 1em;
+    border-radius: 5px;
+}
+#only-read-area blockquote ::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 100%;
+    background-color: var(--black);
+}
+
+#only-read-area .html,
+#only-read-area .css,
+#only-read-area .java,
+#only-read-area .py,
+#only-read-area .md,
+#only-read-area .cs,
+#only-read-area .c,
+#only-read-area .cpp,
+#only-read-area .js {
+    display: block;
+    width: 100%;
+    background-color: var(--sec);
+    border-radius: 5px;
+    padding: 10px;
+    direction: ltr;
+}
+
+@media only screen and (min-width: 1000px) {
+    #only-read-area .tableContaner {
+        max-width: 700px;
+    }
+}

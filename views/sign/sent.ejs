@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar" mode="<%= darkMode?"dark":"light" %>">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تمت العملية بنجاح</title>
+    <link rel="stylesheet" href="/css/vars.css">
+    <style>
+      @font-face {
+          font-family: Ruck;
+          src: url("/css/fonts/main.ttf");
+      }
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        font-family: Ruck;
+        list-style: none;
+        text-decoration: none;
+      }
+
+      body {
+        min-height: 750px;
+        direction: rtl;
+        background-color: var(--bg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        padding: 1em 0;
+      }
+      body > div {
+        min-width: 300px;
+        max-width: 400px;
+        padding: 1em;
+        border-radius: 1rem;
+        border: 1px solid var(--main-color);
+        background-color: var(--box);
+        box-shadow: 0 4px 1em var(--shadow);
+      }
+      body > div > h3 {
+        color: var(--main-color);
+        padding: 6px 5px;
+      }
+      body > div > h3 > span {
+        font-size: larger;
+        margin-inline-end: 10px;
+      }
+      body > div > p {
+        color: var(--second-font);
+      }
+      body > div > a {
+        background-color: var(--box);
+        border: solid 1px var(--main-color);
+        --font1: var(--main-color);
+        display: flex;
+        padding: 0.6em;
+        border-radius: 1rem;
+        position: fixed;
+        left: 1em;
+        bottom: 1em;
+        box-shadow: 0 4px 1em var(--shadow);
+      }
+      body > div > a > svg {
+        width: 35px;
+        height: 35px;
+      }
+      
+      @media only screen and (max-width: 400px) {
+          body > div {
+              border-radius: 0;
+          }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h3>
+        <span>:)</span>
+        تمَّ الإرسال
+      </h3>
+      <p>
+        والآن قد تم ارسال صلاحياتك عبر بريدك الإلكروني، كل ما عليك فعله هو
+        الذهاب لتفقد بريدك الإلكتروني ومن ثم تجسيل دخولك من هناك.
+      </p>
+      <a href="/">
+          <%- include('../components/logo') %>
+      </a>
+    </div>
+  </body>
+</html>

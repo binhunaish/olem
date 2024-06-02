@@ -1,0 +1,41 @@
+html{
+    /* background */
+    --bg-50: #fafafa;
+    --bg-100: #f4f4f5;
+    --bg-200: #e4e4e7;
+    --bg-300: #d4d4d8;
+    --bg-400: #a1a1aa;
+    --bg-500: #71717a;
+    --bg-600: #52525b;
+    --bg-700: #3f3f46;
+    --bg-800: #27272a;
+    --bg-900: #18181b;
+    --bg-950: #09090b;
+    /* shadow color */
+    --shadow: #14141433;
+    /* main colors */
+    --red: #ef4444;
+    --green: #84cc16;
+    --yallow: #fde047;
+    --black: #090909;
+}
+
+html[mode=dark] {
+    --main-color: #8d5cf6;
+    --bg: var(--bg-800);
+    --sec: var(--bg-700);
+    --box: var(--bg-600);
+    --font: var(--bg-100);
+    --second-font: var(--bg-200);
+    --disable-font: var(--bg-400);
+}
+
+html[mode=light] {
+    --main-color: #00acff;
+    --bg: var(--bg-300);
+    --sec: var(--bg-200);
+    --box: var(--bg-100);
+    --font: var(--bg-800);
+    --second-font: var(--bg-800);
+    --disable-font: var(--bg-400);
+}

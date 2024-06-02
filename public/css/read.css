@@ -1,0 +1,319 @@
+@font-face {
+    font-family: Ruck;
+    src: url("./fonts/main.ttf");}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-family: Ruck;
+    list-style: none;
+    text-decoration: none;
+}
+
+html[mode="dark"] body > header > nav > #LD a {
+    font-size: large;
+    background-image: url(./icons/sun.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(0) invert(1) sepia(1) hue-rotate(180deg);
+}
+html[mode="light"] body > header > nav > #LD a {
+    font-size: large;
+    background-image: url(./icons/moon.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+html[mode="light"] body > main {
+    background-color: var(--box);
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    background-color: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+    background-color:  var(--main-color);
+    height: min-content;
+}
+
+.d-none{
+    display: none;
+}
+.slide-in {
+    right: -100% !important;
+}
+
+body {
+    direction: rtl;
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-areas:
+     "header header"    
+     "nav    nav"      
+     "aside  main";
+    grid-template-rows: 55px 33px 1fr;
+    grid-template-columns: 250px auto;
+    background-color: var(--bg);
+}
+body > header {
+    background-color: var(--sec);
+    color: var(--font);
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+body > header .fa-bars {
+    display: none;
+    font-size: x-large;
+}
+body > header > i {
+    flex: 1;
+}
+body > header > h1 {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex: 1;
+}
+body > header #logo {
+    fill: var(--font);
+    height: 30px;
+    width: 30px;
+}
+body > header > nav {
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex: 0.5;
+    max-width: 300px;
+}
+body > header > nav > a {
+    color: var(--font);
+    text-align: center;
+    font-size: 10px;
+}
+body > header > nav > a i {
+    font-size: 15px;
+    font-size: x-large;
+}
+body > header > nav > #LD{
+    color: var(--font);
+    display: flex;
+    background-color: var(--box);
+    border-radius: 1em;
+    padding: 5px 10px;
+    gap: 5px;
+    align-items: center;
+    cursor: pointer;
+    border: var(--main-color) solid 1px;
+    font-size: 10px;
+}
+body > header > nav > #LD a {
+    width: 15px;
+    height: 15px;
+    margin-inline-end: 3px;
+}
+
+body > main {
+    background-color: var(--bg);
+    grid-area: main;
+    padding: 1em;
+    overflow-y: auto;
+}
+body > main > #control h6 {
+    color: var(--font);
+    margin-bottom: 5px;
+}
+body > main > #control h1 {
+    color: var(--font);
+    padding-bottom: 6px;
+    border-bottom: solid var(--disable-font) 1px;
+}
+body > main > #only-read-area {
+    color: var(--font);
+    width: 100%;
+    padding: 1em;
+    overflow: auto;
+    position: relative;
+}
+body > main > #ending h4 {
+    color: var(--disable-font);
+    width: 100%;
+    text-align: end;
+    padding-top: 6px;
+    border-top: solid var(--disable-font) 1px;
+}
+body > main > .btns {
+    padding: 5px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+body > main > .btns > button {
+    font-weight: bold;
+    padding: 5px 10px;
+    background-color: var(--sec);
+    color: var(--font);
+    border-radius: 1em;
+    font-size: 15px;
+    cursor: pointer;
+    border: var(--main-color) 1px solid;
+}
+body > main > .btns > button > pre:first-child {
+    color: var(--main-color);
+}
+body > main > #empty-area {
+    color: var(--font);
+    font-size: large;
+    width: 100%;
+    text-align: center;
+    margin-top: 35vh;
+}
+
+body > aside {
+    background-color: var(--sec);
+    grid-area: aside;
+    color: var(--disable-font);
+    overflow-y: auto;
+}
+body > aside .fa-x {
+    display: none;
+    color: var(--font);
+}
+body > aside h1,
+body > aside h3 {
+    color: var(--font);
+    margin: 10px auto;
+    width: 100%;
+    text-align: center;
+}
+body > aside > ul {
+    margin: 0 3px;
+    color: var(--disable-font) !important;
+    padding: 1em;
+    border: none !important;
+    background-color: var(--sec) !important;
+}
+body > aside > ul * {
+    transition: 200ms;
+    transition-property: color border;
+}
+body > aside ul h3,
+body > aside ul > p,
+body > aside ul > li {
+    transition-duration: 100ms;
+    margin: auto;
+}
+body > aside ul {
+    border-radius: 10px;
+    transition-duration: 100ms;
+    border: var(--font) 1px solid;
+    margin: 8px;
+    padding: 8px;
+    overflow: hidden;
+    background-color: var(--sec);
+}
+body > aside ul:hover {
+    border: var(--main-color) 1px solid;
+    background-color: var(--box);
+}
+body > aside ul:hover > h3 {
+    color: var(--main-color);
+}
+body > aside li {
+    padding: 4px;
+    color: var(--font);
+}
+body > aside li.selected {
+    color: var(--main-color) !important;
+}
+body > aside li:hover {
+    color: var(--main-color);
+}
+body > aside > #empty-area {
+    padding: 1em;
+    text-align: center;
+    color: var(--disable-font) !important;
+}
+
+body > nav {
+    display: flex;
+    background-color:var(--main-color);
+    grid-area: nav;
+    overflow-y: hidden;
+    overflow-x: auto;
+    align-items: center;
+    padding: 0 10px;
+}
+body > nav > a {
+    color: var(--font);
+    margin: 0 5px;
+    cursor: pointer;
+    font-style: normal;
+    text-decoration: none;
+    font-size: 12px;
+}
+body > nav > .selected {
+    background-color: var(--sec);
+    padding: 3px;
+    cursor: pointer;
+    font-weight: bold;
+}
+body > aside ul:has(.selected) {
+    border: var(--main-color) 1px solid;
+    background-color: var(--box);
+}
+body > aside ul:has(.selected) > h3 {
+    color: var(--main-color);
+}
+
+@media only screen and (max-width: 1000px) {
+    body {
+        grid-template-areas:
+         "header"    
+         "nav"      
+         "main";
+        grid-template-rows: 55px 33px 1fr;
+        grid-template-columns: auto;
+    }
+    aside{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        transition: 200ms;
+        transition-property: right;
+        z-index: 20;
+    }
+    aside .fa-x {
+        display: block !important;
+        position: absolute;
+        top: 1em;
+        right: 1em;
+    }
+    body > header .fa-bars {
+        display: block;
+    }
+    body > header > nav {
+        max-width: 150px;
+    }
+    body > header > nav > #LD {
+        position: fixed;
+        bottom: 1em;
+        left: 1.5em;
+        z-index: 10;
+        box-shadow: 0 5px .5em rgba(0, 0, 0, 0.1);
+    }
+}

@@ -1,0 +1,152 @@
+@font-face {
+    font-family: Ruck;
+    src: url("./fonts/main.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-family: Ruck;
+    list-style: none;
+    text-decoration: none;
+}
+
+html[mode="light"] header > svg path {
+    fill: var(--main-color);
+}
+header::after {
+    border: var(--main-color) solid 1px;
+}
+
+body > span {
+    padding: 1em;
+    display: flex;
+    align-items: center;
+}
+body > span a {
+    font-size: large;
+    color: var(--main-color);
+}
+body > span i {
+    padding-inline-end: 10px;
+}
+
+body {
+    background-color: var(--bg);
+}
+body::-webkit-scrollbar {
+    width: 15px;
+}
+body::-webkit-scrollbar-track {
+    background-color: var(--sec);
+}
+body::-webkit-scrollbar-thumb {
+    background-color:  var(--main-color);
+    height: min-content;
+}
+
+header {
+    position: relative;
+    width: 80%;
+    margin: 2em auto;
+    padding: 1em;
+    border-radius: 1rem;
+    color: var(--font);
+    text-align: center;
+    z-index: 2;
+}
+header::after {
+    content: "";
+    position: absolute;
+    background-color: var(--sec);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 80vw 30vw;
+    z-index: -1;
+}
+header::before {
+    content: "";
+    position: absolute;
+    background-color: var(--main-color);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 30vw 30vw;
+    z-index: -2;
+}
+header > svg {
+    width: 80%;
+    max-width: 300px;
+    --font1: var(--main-color)
+}
+header > h1 {
+    color: var(--font);
+    padding: 5px 10px;
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    width: max-content;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.25);
+    font-weight: 500;
+}
+
+main {
+    background-color: var(--sec);
+    width: 80%;
+    margin: 2em auto;
+    padding: 1em;
+    border-radius: 1rem;
+    color: var(--font);
+    text-align: center;
+    border: var(--main-color) solid 1px;
+}
+main h3 {
+    font-weight: 1000;
+    font-size: smaller;
+    margin-bottom: 10px;
+}
+main p {
+    text-align: justify;
+}
+
+section {
+    background-color: var(--sec);
+    width: 80%;
+    margin: 2em auto;
+    padding: 1em;
+    border-radius: 1rem;
+    color: var(--font);
+    text-align: center;
+    border: var(--main-color) solid 1px;
+}
+section h3 {
+    font-weight: 1000;
+    font-size: smaller;
+    margin-bottom: 10px;
+}
+section h4 {
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 1200;
+}
+section p {
+    text-align: justify;
+}
+
+@media only screen and (max-width: 500px) {
+    section,
+    main {
+        border-radius: 0;
+        margin-inline: 0;
+        margin-block: 2px;
+        width: 100%;
+        border: none;
+    }
+}

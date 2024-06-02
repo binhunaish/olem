@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معاينة وتعديل</title>
+    <link rel="stylesheet" href="/css/edit.css">
+
+    <link rel="stylesheet" href="/fontawesome-free-6.4.0-web/css/all.min.css">    <script src="/js/edit.js"></script>
+    <script src="/js/libs/Sortable.min.js"></script>
+</head>
+<body dir="rtl">
+    <header>
+        <div class="btn" onclick="addToTable('Fe', this)">المجالات</div>
+        <div class="btn" onclick="addToTable('Li', this)">القوائم</div>
+        <div class="btn" onclick="addToTable('Le', this)">الدروس</div>
+    </header>
+
+    <section>
+        <nav>
+            <button onclick="showFormDialog(indexOfType);"> اضافة </button>
+            <div class="input-group">
+                <input class="inp" type="text">
+                <p class="label" onclick="search()"><i class="fa fa-search"></i></p>
+            </div>
+        </nav>
+        
+        <div style="width:95vw; margin: auto; overflow: auto;">
+            <h1 id="wronging">لا يوجد محتوى</h1>
+            <table style="width:100%;">
+                <thead id="ths"></thead>
+                <tbody id="tds"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <div id="dialog">
+        <div>
+            <i style="color: black;" class="fa fa-x x" onclick="hideDialog()"></i>
+            <h1>انبثاق</h1>
+            <form id="d-fotm"></form>
+            <button id="btn1">ارسال</button>
+        </div>
+        <div>
+            <i style="color: black;" class="fa fa-x x" onclick="hideDialog()"></i>
+            <h1>الحذف</h1>
+            <p>هل تريد الحذف فعلاً؟</p>
+            <div class="btn-group">
+                <button id="btn1">نعم</button>
+                <button id="btn2" onclick="hideDialog()">لا</button>
+            </div>
+        </div>
+        <div>
+            <i style="color: black;" class="fa fa-x x" onclick="hideDialog()"></i>
+            <h1>اعادة ترتيب العناصر</h1>
+            <ul id="resorter"></ul>
+            <div class="btn-group">
+                <button id="add">اضافة</button>
+                <button id="save">حفظ</button>
+            </div>
+        </div>
+        <div>
+            <i style="color: black;" class="fa fa-x x" onclick="hideDialog()"></i>
+            <h1>اضافة عناصر</h1>
+            <ul id="addItems"></ul>
+            <button id="addItem">اضافة</button>
+        </div>
+    </div>
+</body>
+</html>

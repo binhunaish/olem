@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar" mode="<%= darkMode?"dark":"light" %>">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تسجيل</title>
+    <script> console.log("Hi")</script>
+    <link rel="stylesheet" href="/css/sign.css" />
+  </head>
+  <body dir="rtl">
+    <section>
+      <% if (index == "lo") { %>
+      <div class="card" id="sign">
+        <h1>تسجيل الدخول</h1>
+        <% if (messege) { %>
+          <div class="alert">
+            <%= messege %>
+          </div>
+        <% } %>
+        <form id="form" method="post" action="login">
+          <label for="e-l">ادخل بريدك الإلكتروني</label>
+          <br />
+          <input type="email" name="email" id="e-l" required>
+          <br />
+          <label for="p-l">ادخل كلمة المرور</label>
+          <br />
+          <input type="password" name="password" id="p-l" required>
+          <br />
+          <button class="brn" id="l-submit-btn">تسجيل الدخول للحساب</button>
+        </form>
+        <a href="register">إنشاء حساب</a>
+      </div>
+      <% } else if (index == "re") { %>
+      <div class="card" method="post" id="regester">
+        <h1>إنشاء حساب</h1>
+        <% if (messege) { %>
+        <div class="alert">
+          <%= messege %>
+        </div>
+        <% } %>
+        <form class="form"  method="post" action="register">
+          <label for="n-s">اسم الحساب</label>
+          <br />
+          <input type="text" name="name" id="n-s" required>
+          <br />
+          <label for="e-s">ادخل بريدك الإلكتروني</label>
+          <br />
+          <input type="email" name="email" id="e-s" required>
+          <br />
+          <label for="p-s">ادخل كلمة المرور</label>
+          <br />
+          <input type="password" name="password" id="p-s" required>
+          <br />
+          <label for="b-s">تاريخ الميلاد</label>
+          <br />
+          <input type="date" name="birth" id="b-s" required>
+          <br />
+          <label>ادخل جنسك</label>
+          <br />
+          <span>
+            <input type="radio" id="s-r-m" name="gender" title="ذكر" value="M" required>
+            <label for="s-r-m">ذكر</label>
+            
+            <input type="radio" id="s-r-f" name="gender" title="انثى" value="F" required>
+            <label for="s-r-f">أنثى</label>
+          </span>
+          <br />
+          <button class="brn" id="s-submit-btn">طلب إنشاء الحساب</button>
+        </form>
+        <a href="login">تسجيل الدخول</a>
+      </div>
+      <% } %>
+    </section>
+    <p><a href="/"><%- include('components/logo') %> عُلِم &copy;</a></p>
+  </body>
+</html>

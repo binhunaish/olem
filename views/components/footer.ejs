@@ -1,0 +1,66 @@
+<footer>
+  <style>
+    hr {
+      border: 1px solid var(--main-color);
+      margin: 5px 5vw;
+    }
+    footer {
+      background-color: var(--sec);
+      color: var(--font);
+      text-align: center;
+      padding: 10px;
+    }
+    footer > h3 {
+      font-weight: normal;
+      margin-block: 0.5em;
+      font-size: medium;
+      color: var(--main-color);
+    }
+    footer > div > ul {
+      margin: 10px 19vw;
+      padding: 1em;
+      text-align: start;
+      border-right: solid 5px var(--main-color);
+    }
+    footer > div > ul > h3 {
+      text-align: center;
+      margin-bottom: 1em;
+    }
+    footer > div > ul > li {
+      cursor: pointer;
+      transition: 200ms;
+    }
+    footer > div > ul > li > a {
+      color: var(--font);
+    }
+    footer > div > ul > li:hover {
+      padding-inline-start: 15px;
+    }
+    @media only screen and (min-width: 1000px) {
+        footer > div {
+            display: flex;
+            justify-content: space-around;
+        }
+        footer > div > ul {
+            flex: 1;
+            margin: 10px 0;
+            max-width: 30%;
+        }
+    }
+  </style>
+  <h3>جميع الحقوق محفوظة لدى موقع عُلِم &copy</h3>
+  <hr />
+  <div>
+    <ul>
+      <h3>قم بزيارة الموقع</h3>
+      <li><a href="/">الصفحة الرئيسية</a></li>
+      <li><a href="/feild">المجالات</a></li>
+      <li><a href="/about">عن الموقع</a></li>
+    </ul>
+    <ul>
+      <h3>الاتصالات</h3>
+      <li>اتصل بنا عبر البريد الإلكتروني</li>
+      <li>اتصل بالمجتمع</li>
+    </ul>
+  </div>
+</footer>

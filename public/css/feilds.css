@@ -1,0 +1,178 @@
+@font-face {
+    font-family: Ruck;
+    src: url("./fonts/main.ttf");}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-family: Ruck;
+    list-style: none;
+    text-decoration: none;
+}
+
+body::-webkit-scrollbar {
+    width: 15px;
+}
+body::-webkit-scrollbar-track {
+    background-color: var(--bg);
+}
+body::-webkit-scrollbar-thumb {
+    background-color:  var(--main-color);
+    height: min-content;
+}
+
+body {
+    background-color: var(--bg);
+    direction: rtl;
+}
+
+body header {
+    height: 40vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    gap: 1em;
+    position: relative;
+    overflow: hidden;
+}
+body header::after {
+    content: "";
+    width: 120vw;
+    height: 50vh;
+    position: absolute;
+    background-color: var(--main-color);
+    border-radius: 1em;
+    bottom: 1em;
+    right: 1em;
+}
+body header nav {
+    direction: ltr;
+    position: absolute;
+    z-index: 20;
+    left: 1em;
+    top: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 1em;
+}
+body header nav svg {
+    width: 30px;
+    height: 30px;
+}
+body header nav svg path {
+    fill: white;
+}
+body header nav a {
+    color: white;
+}
+body header nav a i {
+    font-size: 20px;
+}
+body header nav a:nth-child(1){
+    text-align: center;
+    height: 30px;
+}
+body header nav #LD{
+    font-size: 10px;
+    color: var(--font);
+    display: flex;
+    background-color: var(--sec);
+    border-radius: 1em;
+    padding: 5px 10px;
+    gap: 8px;
+    align-items: center;
+    cursor: pointer;
+}
+body header nav #LD i {
+    font-size: 20px;
+}
+body header h1 {
+    color: var(--font);
+    margin: auto;
+    position: relative;
+    z-index: 20;
+    color: white;
+    font-size: 28px;
+}
+body header input {
+    background-color: transparent;
+    color: white;
+    border: white 2px solid;
+    padding: 6px 10px;
+    border-radius: 1em;
+    width: 40vw;
+    transition: 200ms;
+    margin: auto;
+    position: relative;
+    z-index: 20;
+}
+body header input::placeholder {
+    color: white;
+}
+body header input:focus {
+    background-color: white;
+    color: black;
+    box-shadow: 0 5px 1em var(--shadow);
+}
+body header input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 10px;
+    width: 10px;
+    background-repeat: no-repeat;
+    background-image: url('./icons/x.svg');
+}
+
+body main * {
+    color: var(--font);
+}
+body main {
+    width: 97%;
+    background-color: var(--sec);
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+    margin-bottom: 1em;
+}
+body main ul {
+    padding: 1em;
+    padding-left: 3%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    justify-content: space-around;
+}
+body main li {
+    background-color: var(--box);
+    margin: 5px;
+    padding: 1em;
+    border-radius: 1rem;
+    align-items: center;
+    transition: 200ms;
+    transition-property: box-shadow;
+    border: var(--main-color) 1px solid;
+    cursor: pointer;
+    color: var(--font);
+}
+body main li:hover{
+    box-shadow: 0 0 1em var(--shadow);
+}
+body main li h3 {
+    color: var(--main-color);
+    font-weight: bold;
+    text-align: center;
+}
+body main li h6 {
+    color: var(--font-disable);
+    font-weight: 100;
+}
+body main li p {
+    color: var(--second-font);
+    font-size: 14px;
+}

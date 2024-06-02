@@ -1,0 +1,316 @@
+@font-face {
+    font-family: Ruck;
+    src: url("./fonts/SakkalMajalla.dc184b4627acc3e27f1f.woff2");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-family: Ruck;
+    list-style: none;
+}
+
+*[miss]{
+    display: none !important;
+}
+
+:root {
+    --bg1: rgb(10, 10, 10);
+    --bg2: rgb(0, 30, 60);
+    --bg3: rgb(40, 40, 40);
+    --font1: white;
+}
+
+/* public styling */ 
+
+.x {
+    position: absolute;
+    left: 1em;
+    top: 1em;
+}
+
+.d-n {
+    display: none;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+}
+.btn-group button {
+    flex: 1;
+}
+
+button, .btn {
+    padding: 5px;
+    border: solid var(--font1) 1px;
+    color: var(--font1);
+    background-color: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    transition-property: background-color;
+    transition-duration: 200ms;
+    margin: 0 10px;
+}
+button:hover, 
+.btn:hover {
+    background-color: var(--font1) !important;
+    color: var(--bg2) !important;
+}
+
+body > div { 
+    width: 100%;
+    min-height: 100vh;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.247);
+    backdrop-filter: blur(2px);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+body > div > h4 {
+    direction: ltr;
+    background-color: black;
+    color: rgb(255, 73, 73);
+    border-radius: 5px;
+    width: 100%;
+    padding: 5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+input[type=text] {
+    background-color: white;
+    color: black;
+    font-size: x-large;
+    padding: 2px 4px;
+}
+
+.input-group {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--font1);
+}
+.input-group .inp {
+    width: 80%;
+}
+.input-group .label {
+    background-color: var(--bg2);
+    color: var(--font1);
+    text-align: center;
+    min-width: 20px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 10px;
+    transition-duration: 100ms;
+    border-right: 1px var(--bg2) solid;
+}
+.input-group .label:hover{
+    color: var(--bg2);
+    background-color: var(--font1);
+}
+
+body {
+    background-color: var(--bg1);
+}
+
+header {
+    background-color: var(--bg2);
+    color: var(--font1);
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+header div {
+    padding: 5px 1em !important;
+}
+header .checked {
+    background-color: var(--font1) !important;
+}
+
+section {
+    width: 100%;
+    height: 100%;
+}
+section > nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+section > nav > button {
+    padding: 5px 1em !important;
+}
+
+td {
+    padding: 1em;
+    margin: 3px;
+    background-color: var(--bg3);
+    color: var(--font1);
+    position: relative;
+}
+th {
+    background-color: var(--bg2);
+    color: var(--font1);
+}
+
+#wronging {
+    width: 100%;
+    text-align: center;
+    color: var(--font1);
+}
+
+#dialog {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.247);
+    backdrop-filter: blur(5px);
+    padding: 2em;
+    justify-content: center;
+    align-items: center;
+}
+#dialog * {
+    color: black;
+}
+#dialog > div {
+    position: relative;
+    width: 50%;
+    max-width: 500px;
+    max-height: 60vh;
+    background-color: white;
+    color: black;
+    padding: 1em;
+    border-radius: 1rem;
+    overflow: auto;
+}
+#dialog button {
+    width: 100%;
+    border-color: black;
+    font-size: medium;
+    margin: 5px auto;
+}
+#dialog button:hover {
+    background-color: black !important;
+    color: white;
+}
+#dialog form input,
+#dialog form textarea {
+    border: black 1px solid;
+    border-radius: 5px;
+    margin: 5px 0;
+    width: 100%;
+    padding: 5px;
+}
+#dialog form label[input]{
+    display: block;
+    border: black 1px solid;
+    border-radius: 5px;
+    margin: 5px 0;
+    width: 100%;
+    padding: 5px;
+    background-color: red;
+}
+#dialog form input:invalid,
+#dialog form textarea:invalid  {
+    background-color: red;
+}
+#dialog form textarea {
+    resize: vertical;
+    min-height: 5vh;
+}
+#dialog #resorter {
+    padding: 5px 0;
+}
+#dialog #resorter li {
+    display: grid;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px black solid;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-around;
+    grid-template-columns: auto 1fr auto;
+    background-color: white;
+    padding: .5em 1em;
+    padding-inline-start: .5em;
+    gap: .5em;
+    cursor: pointer;
+}
+#dialog #resorter li h5 {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+}
+#dialog #resorter p {
+    text-align: center;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+#dialog #resorter .list {
+    border: 2.5px black solid;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, .1);
+}
+#dialog #addItems li{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 10px;
+    border: solid black 1px;
+    border-radius: 1em;
+    padding: 5px 10px;
+    margin: 5px auto;
+    cursor: pointer;
+}
+#dialog #addItems li h3 {
+    font-weight: 100;
+}
+#dialog #addItems p {
+    margin: 10px 10%;
+    width: 80%;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#dropdown > div {
+    position: absolute;
+    display: block;
+    top: 1em;
+    left: 1em;
+    background-color: white;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.247);
+    color: black;
+    border-radius: 10px;
+    padding: 5px;
+    z-index: 5 !important;
+}
+#dropdown div li {
+    margin: 5px;
+    cursor: pointer;
+}
+#dropdown .back-div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 10 !important;
+}

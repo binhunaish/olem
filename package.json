@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "dev": "npx nodemon app.js --ignore public"
+    "dev": "npx nodemon app.js --ignore public",
+    "start":"node app"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",

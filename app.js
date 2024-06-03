@@ -72,3 +72,5 @@ app.listen(PORT, () => {
     console.log(`Listener is ready to use. 
     \nGo to: http://localhost:${PORT}`);
 });
+
+module.exports = app;

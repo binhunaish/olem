@@ -16,12 +16,12 @@ const LD = () => {
             LD.className = "fa fa-sun";
             h2.innerText = "مشرق";
             document.querySelector('html').setAttribute('mode', 'dark');
-            document.cookie = "mode=dark; domain=localhost; path=/";
+            document.cookie = "mode=dark; path=/";
         } else {;
             LD.className = "fa fa-moon";
             h2.innerText = "مظلم";
             document.querySelector('html').setAttribute('mode', 'light');
-            document.cookie = "mode=light; domain=localhost; path=/";
+            document.cookie = "mode=light; path=/";
         }
     }
 }

@@ -149,11 +149,11 @@ const LDSwitch = (isStored) => {
     const LD = document.querySelector("#LD > a");
     const h2 = document.querySelector("#LD > h2");
     if (document.querySelector('html').getAttribute('mode') == "light") {
-        document.cookie = "mode=dark; domain=localhost; path=/";
+        document.cookie = "mode=dark; path=/";
         h2.innerText = "مشرق";
         document.querySelector('html').setAttribute('mode', 'dark');
     } else {
-        document.cookie = "mode=light; domain=localhost; path=/";
+        document.cookie = "mode=light; path=/";
         h2.innerText = "مظلم";
         document.querySelector('html').setAttribute('mode', 'light');
     }

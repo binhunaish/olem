@@ -58,20 +58,21 @@ const saveFeild = async (cb, {title, type, description}, file, content) => {
         console.log('saving done');
         cb();
     }).catch(err => {
-        deleteFile(obj.icon);
+        //deleteFile(obj.icon);
         console.error(err)
     });
 };
 
 // file
 const saveFile = (file) => {
+    /*
     var type = file.originalFilename.split('.').pop();
     var folder = `public/${type}`;
     if (!fs.existsSync(folder)) fs.mkdirSync(folder);
     var path = `${folder}/_${Date.now().toString()}.${type}`;
     var oldPath = file.filepath;
-    fs.renameSync(oldPath, path);
-    return path;
+    fs.renameSync(oldPath, path);*/
+    return 'path';
 };
 
 // folder

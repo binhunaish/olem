@@ -17,12 +17,12 @@ const mongLink = process.env.DB_LINKS;
 
 // app setting
 app.set('view engine', 'ejs');
-app.set('views', '../views');
+app.set('views', '/views');
 configureEnv();
 
 // app using
 app.use(express.json());
-app.use(express.static('../public'));
+app.use(express.static('/public'));
 app.use(express.urlencoded());
 app.use(cookieParser());
 

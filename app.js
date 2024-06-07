@@ -12,7 +12,7 @@ const docPage = require('./routers/docPage');
 const sign = require('./routers/sign');
 const field = require('./models/field');
 // values
-const PORT = process.env.PORT || 261548;
+const PORT = process.env.PORT || 3000;
 const mongLink = process.env.DB_LINKS;
 
 // app setting

@@ -81,7 +81,7 @@ router.post('/', (req, res, next) => {
 
 // routes (classic auth)
 // // get
-router.get('/register', (req, res, next) => {
+/*router.get('/register', (req, res, next) => {
     var messege = req.query.mg;
     res.render('signing', { darkMode: true, index: 're', messege: messege });
 });
@@ -99,7 +99,7 @@ router.post('/register', (req, res, next) => {
 });
 router.post('/login', (req, res, next) => {
     setTimeout(next, 7500);
-});
+});*/
 
 // OOP Exporter
 module.exports = router;

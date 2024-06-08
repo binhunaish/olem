@@ -13,7 +13,6 @@ const docPage = require('./routers/docPage');
 const sign = require('./routers/sign');
 const field = require('./models/field');
 // values
-const PORT = process.env.PORT || 3000;
 const mongLink = process.env.DB_LINKS;
 
 // app setting
@@ -70,12 +69,6 @@ app.get('/account', verifyToken, (req, res, next) => {
 // 404 page
 app.use((req, res) => {
     res.redirect('/not-found');
-});
-
-// listener
-app.listen(PORT, () => {
-    console.log(`Listener is ready to use. 
-    \nGo to: http://localhost:${PORT}`);
 });
 
 module.exports = app;

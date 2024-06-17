@@ -15,7 +15,7 @@ const { generateUser, deleteUser, activateUser } = require('../middlewares/users
 // models
 const User = require('../models/user');
 // files
-const Email = fs.readFileSync(path.join(__dirname, 'assets', 'email.html'));
+const Email = fs.readFileSync(path.join(process.cwd(), 'assets', 'email.html'));
 
 // routes (only email auth)
 // // get

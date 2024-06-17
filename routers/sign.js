@@ -48,7 +48,7 @@ router.get('/auth/:token', async (req, res, next) => {
         });
     } catch (err) {
         console.log(err);
-        setTimeout(() => res.send("error"), 10000);
+        setTimeout(() => res.send("it's done wrongly"), 10000);
     }
     else {
         res.redirect('/not-found');

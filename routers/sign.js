@@ -4,6 +4,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 // libs
 const fs = require('fs');
+const path = require('path');
 const express = require('express');
 const router = express.Router();
 const jwt = require('jsonwebtoken');
@@ -13,6 +14,8 @@ const { sendEmail } = require('../middlewares/email');
 const { generateUser, deleteUser, activateUser } = require('../middlewares/users');
 // models
 const User = require('../models/user');
+// files
+const Email = fs.readFileSync(path.join(__dirname, 'assets', 'email.html'));
 
 // routes (only email auth)
 // // get
@@ -58,8 +61,7 @@ router.post('/', (req, res, next) => {
         var token = jwt.sign({ email, _id, port: serialPort}, process.env.TOKEN_SEC, {
             expiresIn: 100000,
         });
-        var text = fs.readFileSync('assets/email.html')
-            .toString().replace('{{link}}', token);
+        var text = Email.toString().replace('{{link}}', token);
         sendEmail(
             req.body['email'],
             text,

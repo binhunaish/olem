@@ -13,18 +13,23 @@ const docPage = require('./routers/docPage');
 const sign = require('./routers/sign');
 const field = require('./models/field');
 // values
-const mongLink = process.env.DB_LINKS;
+const mongLink = process.env.DB_LINKSL;
 
 // app setting
-app.set("views", __dirname + "/views");
 app.set("view engine", "ejs");
 configureEnv();
 
 // app using
 app.use(express.json());
-app.use(express.static(__dirname + "public"));
+// app.use(express.static("public"));
 app.use(express.urlencoded());
 app.use(cookieParser());
+
+
+// vercel settings
+app.use(express.static(__dirname + "public"));
+app.set("views",__dirname + "/views");
+
 
 // mongoDB connection
 mongoose.connect(mongLink, {

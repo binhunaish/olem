@@ -13,7 +13,7 @@ const docPage = require('./routers/docPage');
 const sign = require('./routers/sign');
 const field = require('./models/field');
 // values
-const mongLink = process.env.DB_LINKSL;
+const mongLink = process.env.DB_LINKS;
 
 // app setting
 app.set("view engine", "ejs");

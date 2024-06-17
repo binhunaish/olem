@@ -69,13 +69,13 @@ router.post('/', (req, res, next) => {
                 if (e) {
                     isNew && deleteUser(_id);
                     res.send(e).status(404);
-                    next(e)
+                    next(e);
+                    return;
                 }
                 res.cookie("email", req.body['email'], {
                     maxAge: 1000000,
                     path: '/'
-                });
-                res.redirect('/sign/waitng');
+                }).redirect('/sign/waitng');
             }
         );
     });
